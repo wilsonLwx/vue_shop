@@ -41,7 +41,16 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'DjangoUeditor',
+    'apps',
+    'extra_apps',
+    'users.apps.UsersConfig',
+    'user_operation.apps.UserOperationConfig',
+    'goods.apps.GoodsConfig',
+    'trade.apps.TradeConfig',
 ]
+
+# 此处重载是为了使我们的UserProfile生效
+AUTH_USER_MODEL = "users.UserProfile"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
